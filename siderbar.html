@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siderbar Version 2.1</title>
+
+    <!-- Boxions CDN -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- siderbar css -->
+    <link rel="stylesheet" href="siderbar.css">
+</head>
+<body>
+    <div class="siderbar close">
+        <div class="logo-details">
+            <!-- <img src="./logo.png" alt="Logo"> -->
+            <span class="logo_name">Nguyen Phong</span>
+        </div>
+        <ul class="sider-links">
+            <li>
+                <a href="#">
+                    <i class='bx bxs-grid-alt'></i>
+                    <span class="link_name">Menu</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Menu</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bx-collection'></i>
+                        <span class="link_name">Category</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Template</a></li>
+                    <li><a href="#">Item web</a></li>
+                    <li><a href="#">Another</a></li>
+                    <li><a href="#">Card Style</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bxs-book-content'></i>
+                        <span class="link_name">posts</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                        <li class="link_name item_name"><a href="#">Category</a></li>
+                        <li><a href="#">HTML & CSS</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">FrameWork</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bx-plug'></i>
+                        <span class="link_name">Plugins</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                    <ul class="sub-menu">
+                        <li><a class="link_name" href="#">Plugins</a></li>
+                        <li><a href="#">Google font</a></li>
+                        <li><a href="#">BoxIcons</a></li>
+                        <li><a href="#">UI & UX</a></li>
+                    </ul>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-rss'></i>
+                    <span class="link_name">Explore</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Explore</a></li>
+                </ul>
+            </li>
+            <li>
+                    <a href="#">
+                        <i class='bx bx-cog'></i>
+                        <span class="link_name">Settings</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="#">Settings</a></li>
+                        <li><a href="#">Complane</a></li>
+                        <li><a href="#">color form</a></li>
+                    </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img src="./logo.png" alt="profile" class="profile">
+                    </div>
+                        <div class="profile_item">
+                            <div class="profile_name">Nguyen Phong</div>
+                        </div>
+                </div>
+            </li>
+        </ul>
+        <!--============== Profile =============-->
+
+    </div>
+        <section class="home-section">
+            <div class="home-content">
+                <i class='bx bx-menu' ></i>
+            </div>
+        </section>
+    </div>
+
+
+    <script>
+        let arrow = document.querySelectorAll(".arrow");
+        for (var i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click", (e)=>{
+                let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+                arrowParent.classList.toggle("showMenu");
+            });
+        }
+        let sidebar = document.querySelector(".siderbar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", ()=>{
+        sidebar.classList.toggle("close");
+        });
+    </script>
+
+
+    <!-- Boxions JS-->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- script js  -->
+    <!-- <script src="./script.js"></script> -->
+</body>
+</html>
